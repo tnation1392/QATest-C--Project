@@ -1,0 +1,16 @@
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\bin\Debug\net10.0\QATest.exe
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\bin\Debug\net10.0\QATest.deps.json
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\bin\Debug\net10.0\QATest.runtimeconfig.json
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\bin\Debug\net10.0\QATest.dll
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\bin\Debug\net10.0\QATest.pdb
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.AssemblyInfoInputs.cache
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.AssemblyInfo.cs
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.csproj.CoreCompileInputs.cache
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.sourcelink.json
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.dll
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\refint\QATest.dll
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.pdb
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.genruntimeconfig.cache
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\ref\QATest.dll
+C:\Users\todd.nason\Desktop\C#\QATest\QATest\obj\Debug\net10.0\QATest.csproj.Up2Date
