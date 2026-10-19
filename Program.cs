@@ -4,17 +4,22 @@ class Program
 {
     static void Main()
     {
-        TestCase loginTest =
-            new FunctionalTest("Login Test", TestPriority.High);
+        TestSuite suite = new TestSuite("Regression Suite");
 
-        TestCase loadTest =
-            new PerformanceTest("Load Test", TestPriority.Critical);
+        suite.AddTest(
+            new FunctionalTest("Login Test", TestPriority.High));
 
-        loginTest.RunTest();
-        loadTest.RunTest();
+        suite.AddTest(
+            new PerformanceTest("Load Test", TestPriority.Critical));
 
-        Console.WriteLine($"{loginTest.Name}: {loginTest.Status}");
-        Console.WriteLine($"{loadTest.Name}: {loadTest.Status}");
+        Console.WriteLine($"Suite: {suite.Name}");
+        Console.WriteLine();
+
+        foreach (TestCase test in suite.Tests)
+        {
+            Console.WriteLine(
+                $"{test.Name} - {test.Priority} - {test.Status}");
+        }
 
         Console.WriteLine();
 

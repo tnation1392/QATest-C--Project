@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace QATest;
+
+public class TestSuite
+{
+    public string Name { get; set; }
+
+    public List<TestCase> Tests { get; set; }
+
+    public TestSuite(string name)
+    {
+        Name = name;
+        Tests = new List<TestCase>();
+    }
+
+    public void AddTest(TestCase test)
+    {
+        Tests.Add(test);
+    }
+}
