@@ -12,6 +12,8 @@ class Program
         suite.AddTest(
             new PerformanceTest("Load Test", TestPriority.Critical));
 
+        suite.RunAllTests();
+
         Console.WriteLine($"Suite: {suite.Name}");
         Console.WriteLine();
 

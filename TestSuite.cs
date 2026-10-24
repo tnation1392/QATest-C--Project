@@ -20,4 +20,13 @@ public class TestSuite
     {
         Tests.Add(test);
     }
+
+    public void RunAllTests()
+    {
+        foreach (TestCase test in Tests)
+        {
+            test.RunTest();
+        }
+    }
+
 }
