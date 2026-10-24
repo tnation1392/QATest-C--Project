@@ -35,5 +35,13 @@ class Program
         Console.WriteLine("2. Run Tests");
         Console.WriteLine("3. View Results");
         Console.WriteLine("0. Exit");
+
+        Console.Write("Enter selection: ");
+
+        string? choice = Console.ReadLine();
+
+        Console.WriteLine();
+
+        Console.WriteLine($"You selected: {choice}");
     }
 }
