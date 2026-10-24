@@ -12,23 +12,20 @@ class Program
         suite.AddTest(
             new PerformanceTest("Load Test", TestPriority.Critical));
 
-        suite.RunAllTests();
+        string? choice = DisplayMenu();
 
-        Console.WriteLine($"Suite: {suite.Name}");
-        Console.WriteLine();
-
-        foreach (TestCase test in suite.Tests)
+        if (choice == "1")
         {
-            Console.WriteLine(
-                $"{test.Name} - {test.Priority} - {test.Status}");
+            DisplayTests(suite);
         }
-
-        Console.WriteLine();
-
-        DisplayMenu();
+        else if (choice == "2")
+        {
+            RunTests(suite);
+        }
     }
+    
 
-    static void DisplayMenu()
+    static string? DisplayMenu()
     {
         Console.WriteLine("=== QA Test System ===");
         Console.WriteLine("1. View Tests");
@@ -42,6 +39,25 @@ class Program
 
         Console.WriteLine();
 
-        Console.WriteLine($"You selected: {choice}");
+        return choice;
+    }
+
+    static void DisplayTests(TestSuite suite)
+    {
+        Console.WriteLine($"Suite: {suite.Name}");
+        Console.WriteLine();
+        foreach (TestCase test in suite.Tests)
+        {
+            Console.WriteLine(
+                $"{test.Name} - {test.Priority} - {test.Status}");
+        }
+        
+    }
+
+    static void RunTests(TestSuite suite)
+    {
+        suite.RunAllTests();
+
+        Console.WriteLine("All tests executed.");
     }
 }
