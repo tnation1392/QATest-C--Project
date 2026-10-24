@@ -24,7 +24,6 @@ class Program
         }
     }
     
-
     static string? DisplayMenu()
     {
         Console.WriteLine("=== QA Test System ===");
@@ -56,8 +55,8 @@ class Program
 
     static void RunTests(TestSuite suite)
     {
-        suite.RunAllTests();
+        ITestRunner runner = new ManualTestRunner();
 
-        Console.WriteLine("All tests executed.");
+        runner.RunTests(suite);
     }
 }
