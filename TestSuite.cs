@@ -29,4 +29,17 @@ public class TestSuite
         }
     }
 
+    public List<TestResult> GetResults()
+    {
+        List<TestResult> results = new List<TestResult>();
+
+        foreach (TestCase test in Tests)
+        {
+            results.Add(
+                new TestResult(test.Name, test.Status));
+        }
+
+        return results;
+    }
+
 }

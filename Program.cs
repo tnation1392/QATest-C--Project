@@ -1,4 +1,6 @@
-﻿namespace QATest;
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace QATest;
 
 class Program
 {
@@ -20,10 +22,15 @@ class Program
         }
         else if (choice == "2")
         {
-            RunTests(suite);
+            ITestRunner runner = CreateRunner(choice);
+            RunTests(suite, runner);
+        }
+        else if (choice == "3")
+        {
+            DisplayResults(suite);
         }
     }
-    
+
     static string? DisplayMenu()
     {
         Console.WriteLine("=== QA Test System ===");
@@ -50,13 +57,37 @@ class Program
             Console.WriteLine(
                 $"{test.Name} - {test.Priority} - {test.Status}");
         }
-        
+
     }
 
-    static void RunTests(TestSuite suite)
+    static void RunTests(TestSuite suite, ITestRunner runner)
     {
-        ITestRunner runner = new ManualTestRunner();
-
-        runner.RunTests(suite);
+              runner.RunTests(suite);
     }
-}
+
+    static ITestRunner CreateRunner(string? choice)
+    {
+        if (choice == "2")
+        {
+            return new ManualTestRunner();
+        }
+
+        return new AutomatedTestRunner();
+    }
+
+    static void DisplayResults(TestSuite suite)
+    {
+        List<TestResult> results = suite.GetResults();
+
+        Console.WriteLine("=== Results ===");
+
+        foreach (TestResult result in results)
+        {
+            Console.WriteLine(
+                $"{result.TestName} - {result.Status}");
+        }
+    }
+
+
+};
+
